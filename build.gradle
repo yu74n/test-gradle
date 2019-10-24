@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.2'
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE'
+    }
+}
+
+apply from: "${rootDir}/gradle/scripts/build-flags.gradle"
+
+rootProject.tasks.hg.doFirst {
+    println "build.gradle do First"
+}
+
+rootProject.tasks.hg.doLast {
+    println "build.gradle do Last"
+}

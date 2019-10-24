@@ -1,0 +1,3 @@
+rootProject.name = 'test-gradle'
+
+apply from: "${rootDir}/gradle/scripts/settings-flags.gradle"
